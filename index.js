@@ -1,4 +1,4 @@
-// const fs = require('fs');
+const fs = require('fs');
 // const inquirer = require('inquirer');
 // // const readline = require('readline');
 // //const generatePage = require('./src/page-template');
@@ -56,6 +56,18 @@ const generatePage = (userName, githubName) => {
   };
 
 
-console.log(name, github);
-console.log(generatePage(name, github));
+// console.log(name, github);
+// console.log(generatePage(name, github));
+
+// fs.writeFile('index.html', generatePage(name, github), err => {
+//     if (err) throw err;
+  
+//     console.log('Portfolio complete! Check out index.html to see the output!');
+//   });
  
+  fs.writeFile('index.html', generatePage(name, github), err => {
+      if (err) throw err;
+
+      console.log('portfolio complete! See index file for ouput');
+  
+  });
